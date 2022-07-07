@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+body div.co{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    box-shadow: 0px 0px 5px 0px black;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    margin: 0 !important;
+}
+body .co img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 30px 0;
+}
+body .fo{
+    text-align: center;
+    text-decoration: none;
+}
+body button{
+    width: 100%;
+    border-radius: 100px !important;
+    margin: 30px 0;
+}
