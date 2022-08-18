@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+body::-webkit-scrollbar {
+  background-color: white;
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: black;
+}
+.header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  padding-right: 40px;
+}
+.header-container .divOne .menu {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: rgb(161, 161, 161);
+}
+.header-container .divOne {
+  display: flex;
+  align-items: center;
+}
+.header-container .y-img {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.header-container .y-img img {
+  width: 35px;
+  height: 35px;
+  /* border: 1px solid black; */
+}
+.header-container .y-img div {
+  margin: 0 5px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -3px;
+}
+.header-container .y-img sup {
+  font-weight: normal !important;
+  letter-spacing: 0 !important;
+  font-size: 12px;
+  position: relative;
+  bottom: 8px;
+}
+.header-container .divOne,
+.header-container .divTwo,
+.header-container .divThree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-container .divThree div {
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  background-color: rgb(161, 161, 161);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  position: relative;
+}
+.header-container .divTwo input {
+  width: 550px;
+}
+.header-container .divTwo input::placeholder {
+  font-size: 18px;
+}
+.header-container .divTwo input,
+.header-container .divTwo button {
+  padding: 12px;
+}
+.header-container .divTwo .ix {
+  padding: 7px 15px;
+  border: 1px solid black;
+  font-size: 20px;
+  display: none;
+}
+.header-container .divTwo .fa-microphone {
+  width: 35px;
+  height: 35px;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  border-radius: 100px;
+}
+.navigation {
+  top: 50px;
+  position: fixed;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: white;
+  overflow-y: scroll;
+}
+.navigation::-webkit-scrollbar {
+  background-color: white;
+  width: 8px;
+}
+.navigation::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 100px;
+}
+nav {
+  display: block;
+}
+nav a.active {
+  background-color: rgb(161, 161, 161);
+}
+nav a {
+  padding: 8px 28px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+nav a:hover:not(.hover) {
+  background-color: whitesmoke;
+}
+nav a span:first-child {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+}
+nav a span:nth-of-type(1) {
+  border-radius: 100px;
+}
+nav a span:nth-of-type(2) {
+  margin: 0 25px;
+}
+nav {
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+}
+nav.thirdNav button {
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  border: none;
+  font-size: 18px;
+  margin-top: 15px;
+}
+nav.thirdNav button:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+.loading {
+  animation-name: loading;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+@keyframes loading {
+  from {
+    width: 100px;
+  }
+  50% {
+    width: 30%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.header .carousel {
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid rgb(161, 161, 161);
+  border-bottom: 1px solid rgb(161, 161, 161);
+}
+.header .carousel-content {
+  position: relative;
+  left: 16.3%;
+  top: 0;
+  width: 83.7%;
+}
+.header .carousel-content button {
+  position: absolute;
+  z-index: 5;
+  top: 2.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  background-color: white;
+  box-shadow: 8px 0px 15px 8px white;
+}
+.header .carousel-content button:nth-of-type(1) {
+  left: 0;
+  display: none;
+}
+.header .carousel-content button:nth-of-type(2) {
+  right: 0px;
+  transform: rotate(180deg);
+}
+.header .carousel-content .slider div,
+.header .carousel-content button span {
+  padding: 15px;
+  border-radius: 100px;
+  background-color: white;
+  border: 1px solid black;
+}
+.header .carousel .carousel-content .slider {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  overflow: hidden;
+}
+.header .carousel .carousel-content .slider div {
+  color: white;
+  padding: 10px 15px !important;
+  background-color: black;
+  margin: 0 3px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.body {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+.body .body-content {
+  position: absolute;
+  top: 100px;
+  left: 250px;
+  width: 83.7%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.body .body-content .box-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: whitesmoke;
+  width: 100%;
+}
+.box {
+  padding: 10px;
+}
+.box .img {
+  height: 180px;
+  width: 290px;
+  background-size: contain;
+  position: relative;
+}
+.box .img::after {
+  position: absolute;
+  content: '10:34';
+  width: 40px;
+  bottom: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+.box .box-flex {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 5px 20px;
+}
+.box .box-flex .box-divOne .frame {
+  position: relative;
+  width: 33px;
+  height: 80px;
+}
+.box .box-flex .box-divOne img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  border-radius: 100px;
+  border: 1px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.box .box-divTwo {
+  color: black;
+  margin: 0 20px;
+}
+.box .box-divTwo div:nth-of-type(2) {
+  margin: 10px 0;
+}
+.short {
+  margin: 5px 0;
+  width: 100%;
+}
+.short .short-content {
+  background-color: whitesmoke;
+}
+.short .short-content .short-pad,
+.short .short-content .short-slider {
+  padding: 15px;
+}
+.short .short-content .short-top-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.short .short-content .short-top div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+}
+.short .short-content .short-top div:nth-of-type(1) img {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 100px;
+}
+.short .short-content .short-top div:nth-of-type(1) span {
+  margin: 0 10px;
+}
+.short .short-content .short-top div:nth-of-type(2) button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border: none;
+}
+.short .short-content .short-top-flex span {
+  font-size: 20px;
+}
+.short .short-slider .short-slider-flex .short-slider-bottom {
+  display: none;
+}
+.short .short-slider .short-slider-flex,
+.short .short-slider .short-slider-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.short .short-slider button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 20px;
+  margin-top: 10px;
+}
+.short .short-slider .short-slider-box {
+  width: 160px;
+  margin-right: 15px;
+}
+.short .short-slider .short-slider-box img {
+  width: 100%;
+  background-color: rgb(131, 131, 131);
+  height: 300px;
+}
+.short .short-slider .short-slider-box .slider-content span {
+  display: block;
+  padding: 7px 0;
+  margin: 5px 0;
+}
+.body .body-content .x {
+  margin: 4px 0;
+}
+.body .body-content .spinner {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body .body-content .spinner span {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 35px;
+  width: 35px;
+  animation-name: loading;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-fill-mode: both;
+  animation-duration: 2s;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.seventhNav div {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  margin-left: 20px;
+}
+.seventhNav div a {
+  margin: 0 5px;
+  padding: 0 !important;
+  font-size: 13px !important;
+}
